@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <title>Music Player</title>
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.6/owl.carousel.min.js"></script>
+</head>
+
+<body ng-controller="PlayerController">
+    <div class="top-bar">
+        <img class="home-icon" src="images/home.png" alt="Channel 77">
+    </div>
+    <div id="musicPlayer" class="owl-carousel">
+        <div class="outer item" ng-repeat="song in playlist track by $index" emit-last-repeater-element>
+            <div class="poster">
+                <audio id="{{song.name}}" src="{{song.url}}"></audio>
+                <div class="inner">
+                    <h6>
+                    {{song.name}}
+                </h6>
+                    <span ng-if="song.playing">
+                    <div id="play" class="pause"></div> 
+                </span>
+                    <span ng-if="!song.playing">
+                    <div id="play" class="play"></div> 
+                </span>
+                </div>
+                <button ng-click="play(song)" class="playbtn" ng-show="!song.playing">Play</button>
+                <button ng-click="stop(song)" class="playbtn" ng-show="song.playing">Pause</button>
+            </div>
+            <div class="info"></div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
