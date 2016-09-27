@@ -37,7 +37,7 @@ body {
 }
 
 .owl-stage {
-    padding: 100px 0 20px 0;
+    padding: 50px 0 20px 0;
     height: auto;
 }
 
@@ -126,7 +126,7 @@ body {
 
 .owl-prev {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 0%;
     color: black;
     height: 50px;
@@ -136,7 +136,7 @@ body {
 
 .owl-next {
     position: absolute;
-    top: 50%;
+    top: 40%;
     right: 0%;
     color: black;
     height: 50px;
