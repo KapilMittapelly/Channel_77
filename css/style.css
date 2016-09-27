@@ -42,9 +42,6 @@ body {
 }
 
 #musicPlayer .outer {
-    font: 12px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
-    text-shadow: 0 1px rgba(255, 255, 255, .8);
-    background: #fff;
     border: 1px solid #5dd;
     border-radius: 5px;
     color: #333;
@@ -57,13 +54,9 @@ body {
 
 #musicPlayer div.inner {
     width: 200px;
-    height: 175px;
-    font-size: 20px;
-    font-weight: normal;
-    padding: 20px 25px;
+    height: 250px;
+    padding: 25px;
     margin: 0 0 10px 0;
-    background-color: #eee;
-    background-image: linear-gradient(#fff, #eee);
 }
 
 #musicPlayer div.inner span {
@@ -106,6 +99,10 @@ body {
 #musicPlayer .inner h3 {
     height: 50px;
     margin: auto;
+}
+
+.inner .buttons {
+    margin-top: 100px;	
 }
 
 #musicPlayer .playbtn {
@@ -168,9 +165,10 @@ body {
     margin: 0 100px;
 }
 
-.inner h6 {
+#musicPlayer h6 {
     margin-bottom: 0;
     height: 35px;
+    font: 15px 'Lucida Sans', 'trebuchet MS', Arial, Helvetica;
 }
 
 .footer {
@@ -267,14 +265,14 @@ body {
     box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0);
 }
 
-.owl-item:nth-child(3n+1) .item .info {
+.owl-item:nth-child(3n+1) .item .poster {
     background-image: url(../posters/poster04.jpg);
 }
 
-.owl-item:nth-child(3n+2) .item .info {
+.owl-item:nth-child(3n+2) .item .poster {
     background-image: url(../posters/poster05.jpg);
 }
 
-.owl-item:nth-child(3n+3) .item .info {
+.owl-item:nth-child(3n+3) .item .poster {
     background-image: url(../posters/poster07.jpg);
 }

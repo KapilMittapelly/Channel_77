@@ -16,23 +16,29 @@
     </div>
     <div id="musicPlayer" class="owl-carousel">
         <div class="outer item" ng-repeat="song in playlist track by $index" emit-last-repeater-element>
-            <div class="poster">
+            <div class="info">
                 <audio id="{{song.name}}" src="{{song.url}}"></audio>
                 <div class="inner">
                     <h6>
+                        {{song.name}}
+                    </h6>
+                    <span ng-if="song.playing">
+                        <div id="play" class="pause"></div> 
+                    </span>
+                    <span ng-if="!song.playing">
+                        <div id="play" class="play"></div> 
+                    </span>
+                    <div class="buttons">
+                        <button ng-click="play(song)" class="playbtn" ng-show="!song.playing">Play</button>
+                        <button ng-click="stop(song)" class="playbtn" ng-show="song.playing">Pause</button>
+                    </div>
+                </div>
+            </div>
+            <div class="poster">
+                <h6>
                     {{song.name}}
                 </h6>
-                    <span ng-if="song.playing">
-                    <div id="play" class="pause"></div> 
-                </span>
-                    <span ng-if="!song.playing">
-                    <div id="play" class="play"></div> 
-                </span>
-                </div>
-                <button ng-click="play(song)" class="playbtn" ng-show="!song.playing">Play</button>
-                <button ng-click="stop(song)" class="playbtn" ng-show="song.playing">Pause</button>
             </div>
-            <div class="info"></div>
         </div>
     </div>
     <div class="footer">
